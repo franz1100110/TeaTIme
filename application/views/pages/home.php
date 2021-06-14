@@ -1,6 +1,8 @@
-
+<?php
+	$this->load->view('templates/header');
+?>
 <div class="pull-right">
-	<a href="<?php echo base_url()."index.php/Admin/add"; ?>" class="btn btn-success">Add</a> 
+	<a href="<?php echo site_url('admin/add'); ?>" class="btn btn-success">Add</a> 
 </div>
 
 <table class="table table-striped table-bordered">
@@ -20,8 +22,8 @@
 		<td><?php echo $a['nama']; ?></td>
 		<td><?php echo $a['email']; ?></td>
 		<td>
-            <a href="<?php echo base_url('index.php/Admin/edit/'.$a['id']); ?>" class="btn btn-info btn-xs">Edit</a> 
-            <a href="<?php echo base_url('index.php/Admin/remove/'.$a['id']); ?>" class="btn btn-danger btn-xs">Delete</a>
+            <a href="<?php echo base_url('admin/edit/'.$a['id']); ?>" class="btn btn-info btn-xs">Edit</a> 
+            <a href="<?php echo base_url('admin/remove/'.$a['id']); ?>" class="btn btn-danger btn-xs">Delete</a>
         </td>
     </tr>
 	<?php } ?>

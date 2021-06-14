@@ -17,7 +17,7 @@ class Article extends CI_Controller{
     function index()
     {
         $data['article'] = $this->Article_model->get_all_article();
-        
+        $this->load->view('templates/header');
         $data['_view'] = 'article/index';
         $this->load->view('layouts/main',$data);
     }
@@ -44,6 +44,7 @@ class Article extends CI_Controller{
         else
         {            
             $data['_view'] = 'article/add';
+            $this->load->view('templates/header');
             $this->load->view('layouts/main',$data);
         }
     }  
@@ -75,6 +76,7 @@ class Article extends CI_Controller{
             else
             {
                 $data['_view'] = 'article/edit';
+                $this->load->view('templates/header');
                 $this->load->view('layouts/main',$data);
             }
         }

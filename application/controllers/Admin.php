@@ -18,7 +18,9 @@ class Admin extends CI_Controller{
     {
         $data['admin'] = $this->Admin_model->get_all_admin();
         
-        $data['_view'] = 'admin/index';
+        $data['_view'] = 'Admin/index';
+
+	    $this->load->view('templates/header');
         $this->load->view('layouts/main',$data);
     }
 
@@ -37,11 +39,12 @@ class Admin extends CI_Controller{
             );
             
             $admin_id = $this->Admin_model->add_admin($params);
-            redirect('admin/index');
+            redirect('index.php/Admin/index');
         }
         else
         {            
-            $data['_view'] = 'admin/add';
+            $data['_view'] = 'Admin/add';
+            $this->load->view('templates/header');
             $this->load->view('layouts/main',$data);
         }
     }  
@@ -66,16 +69,17 @@ class Admin extends CI_Controller{
                 );
 
                 $this->Admin_model->update_admin($id,$params);            
-                redirect('admin/index');
+                redirect('index.php/Admin/index');
             }
             else
             {
-                $data['_view'] = 'admin/edit';
+                $data['_view'] = 'Admin/edit';
+                $this->load->view('templates/header');
                 $this->load->view('layouts/main',$data);
             }
         }
         else
-            show_error('The admin you are trying to edit does not exist.');
+            show_error('Admin yang ingin diedit tidak ada!');
     } 
 
     /*
@@ -89,10 +93,10 @@ class Admin extends CI_Controller{
         if(isset($admin['id']))
         {
             $this->Admin_model->delete_admin($id);
-            redirect('admin/index');
+            redirect('index.php/Admin/index');
         }
         else
-            show_error('The admin you are trying to delete does not exist.');
+            show_error('Admin yang ingin dihapus tidak ada!');
     }
     
 }

@@ -1,5 +1,5 @@
-<?php echo form_open('admin/add',array("class"=>"form-horizontal")); ?>
 
+	<form action="<?php echo base_url()."index.php/Admin/add" ?>" method="POST">
 	<div class="form-group">	
 		<label for="username" class="col-md-4 control-label">Username</label>
 		<div class="col-md-8">
@@ -30,8 +30,7 @@
 
 	<div class="form-group">
 		<div class="col-sm-offset-4 col-sm-8">
-			<button type="submit" class="btn btn-success">Save</button>
+			<button type="submit" class="btn btn-success">Register</button>
         </div>
 	</div>
-
-<?php echo form_close(); ?>
+	</form>

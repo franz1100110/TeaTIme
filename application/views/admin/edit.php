@@ -1,4 +1,4 @@
-<?php echo form_open('admin/edit/'.$admin['id'],array("class"=>"form-horizontal")); ?>
+<?php echo form_open('index.php/admin/edit/'.$admin['id'],array("class"=>"form-horizontal")); ?>
 
 	<div class="form-group">
 		<label for="password" class="col-md-4 control-label">Password</label>
