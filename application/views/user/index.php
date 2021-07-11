@@ -1,7 +1,3 @@
-<div class="pull-right">
-	<a href="<?php echo site_url('user/add'); ?>" class="btn btn-success">Add</a> 
-</div>
-
 <table class="table table-striped table-bordered">
     <tr>
 		<th>ID</th>
@@ -19,9 +15,12 @@
 		<td><?php echo $u['nama']; ?></td>
 		<td><?php echo $u['email']; ?></td>
 		<td>
-            <a href="<?php echo site_url('user/edit/'.$u['id']); ?>" class="btn btn-info btn-xs">Edit</a> 
-            <a href="<?php echo site_url('user/remove/'.$u['id']); ?>" class="btn btn-danger btn-xs">Delete</a>
+            <a href="<?php echo base_url('index.php/User/edit/'.$u['id']); ?>" class="btn btn-info btn-xs">Edit</a> 
+            <a href="<?php echo base_url('index.php/User/remove/'.$u['id']); ?>" class="btn btn-danger btn-xs">Delete</a>
         </td>
     </tr>
 	<?php } ?>
 </table>
+<div class="pull-right">
+	<a href="<?php echo site_url('user/add'); ?>" class="btn btn-success">Add</a> 
+</div>

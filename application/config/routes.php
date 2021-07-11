@@ -6,8 +6,18 @@ $route['admin/create'] = 'admin/add';
 $route['admin/update'] = 'admin/edit';
 $route['admin/(:any)'] = 'admin/view/$1';
 $route['admin'] = 'admin/index';
+$route['article/index'] = 'article/index';
+$route['article/create'] = 'article/add';
+$route['article/update'] = 'article/edit';
+$route['article/(:any)'] = 'article/view/$1';
+$route['article'] = 'article/index';
+$route['admin/index'] = 'admins/index';
+$route['admin/create'] = 'admin/add';
+$route['admin/update'] = 'admin/edit';
+$route['admin/(:any)'] = 'admin/view/$1';
+$route['admin'] = 'admin/index';
 
-$route['default_controller'] = 'admin/index';
+$route['default_controller'] = 'article/home';
 
 $route['categories'] = 'categories/index';
 $route['categories/create'] = 'categories/create';

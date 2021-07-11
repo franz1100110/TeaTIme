@@ -12,7 +12,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-  <a class="navbar-brand" href="<?php echo base_url()."index.php/Article/home" ?>">Tea Time</a>
+  <a class="navbar-brand" href="<?php echo base_url()."index.php/Article/index" ?>">Tea Time</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,14 +20,17 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
-        <a class="nav-link" href="<?php echo base_url()."index.php/Article/home" ?>">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo base_url()."index.php/Article/index" ?>">Article <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url()."index.php/Pages/about"?>">About</a>
+        <a class="nav-link" href="<?php echo base_url()."index.php/User/index" ?>">User</a>
       </li>
+      <?php
+        if($this->session->userdata('status')=='logged in'):?>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url()."index.php/Pages/contact" ?>">Contact Us</a>
+        <a class="nav-link"href="#">Welcome <?php echo $this->session->userdata('nama')?> !</a>
       </li>
+      <?php endif?>
     </ul>
     <ul class="navbar-nav">
     
@@ -50,12 +53,7 @@
   </script>
     <?php
     if($this->session->userdata('status')=='logged in'):?>
-     <?php
-        if($this->session->userdata('status')=='logged in'):?>
-      <li class="nav-item">
-        <a class="nav-link"href="#">Welcome <?php echo $this->session->userdata('nama')?> !</a>
-      </li>
-      <?php endif?>
+
     <div class="pull-right">
 	  <a href="<?php echo base_url()."index.php/Pages/logout"; ?>" class="btn btn-success">Logout</a> 
     </div>

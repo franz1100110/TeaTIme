@@ -1,8 +1,3 @@
-
-<div class="pull-right">
-	<a href="<?php echo base_url()."index.php/Admin/add"; ?>" class="btn btn-success">Add</a> 
-</div>
-
 <table class="table table-striped table-bordered">
     <tr>
 		<th>ID</th>
@@ -26,3 +21,6 @@
     </tr>
 	<?php } ?>
 </table>
+<div class="pull-right">
+	<a href="<?php echo base_url()."index.php/Admin/add"; ?>" class="btn btn-success">Add</a> 
+</div>

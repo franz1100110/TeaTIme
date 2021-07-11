@@ -1,4 +1,4 @@
-<?php echo form_open('article/add',array("class"=>"form-horizontal")); ?>
+<form action="<?php echo base_url()."index.php/Article/add" ?>" method="POST">
 
 	<div class="form-group">
 		<label for="judul" class="col-md-4 control-label">Judul</label>
@@ -25,15 +25,9 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="video" class="col-md-4 control-label">Video</label>
-		<div class="col-md-8">
-			<input type="text" name="video" value="<?php echo $this->input->post('video'); ?>" class="form-control" id="video" />
-		</div>
-	</div>
-	<div class="form-group">
 		<label for="tanggal" class="col-md-4 control-label">Tanggal</label>
 		<div class="col-md-8">
-			<input type="text" name="tanggal" value="<?php echo $this->input->post('tanggal'); ?>" class="form-control" id="tanggal" />
+			<input type="date" name="tanggal" value="<?php echo $this->input->post('tanggal'); ?>" class="form-control" id="tanggal" />
 		</div>
 	</div>
 	
